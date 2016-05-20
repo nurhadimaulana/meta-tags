@@ -19,7 +19,7 @@ module MetaTags
       tags = []
 
       render_charset(tags)
-      render_title(tags)
+      # render_title(tags)
       render_icon(tags)
       render_with_normalization(tags, :description)
       render_with_normalization(tags, :keywords)
