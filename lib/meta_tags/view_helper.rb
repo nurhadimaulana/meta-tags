@@ -54,8 +54,8 @@ module MetaTags
     # @see #display_meta_tags
     #
     def title(title = nil, headline = '')
-      set_meta_tags(title: title) unless title.nil?
-      headline.blank? ? meta_tags[:title] : headline
+      set_meta_tags(title: title.html_safe) unless title.nil?
+      headline.blank? ? meta_tags[:title].html_safe : headline.html_safe
     end
 
     # Set the page keywords.
