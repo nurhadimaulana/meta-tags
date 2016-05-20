@@ -34,7 +34,6 @@ module MetaTags
       render_custom(tags)
 
       tags.compact.map { |tag| tag.render(view) }.join("\n").html_safe
-      puts tags
     end
 
     protected
