@@ -19,7 +19,7 @@ module MetaTags
       tags = []
 
       render_charset(tags)
-      # render_title(tags)
+      render_title(tags)
       render_icon(tags)
       render_with_normalization(tags, :description)
       render_with_normalization(tags, :keywords)
@@ -34,6 +34,7 @@ module MetaTags
       render_custom(tags)
 
       tags.compact.map { |tag| tag.render(view) }.join("\n").html_safe
+      puts tags
     end
 
     protected
